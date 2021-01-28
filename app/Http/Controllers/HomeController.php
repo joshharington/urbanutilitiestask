@@ -23,9 +23,10 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index() {
+        return view('home');
+    }
 
-        $upcomingData = MovieAPI::getUpcoming();
-
-        return view('home', ['upcomingData' => $upcomingData]);
+    public function watchlist() {
+        return view('watchlist');
     }
 }

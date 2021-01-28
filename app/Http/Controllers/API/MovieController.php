@@ -20,4 +20,9 @@ class MovieController extends Controller {
         return response()->json(['data' => $data]);
     }
 
+    function getMovie($movieId) {
+        $data = MovieAPI::getMovie($movieId);
+        return response()->json(['data' => $data]);
+    }
+
 }

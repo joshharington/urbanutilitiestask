@@ -39,6 +39,7 @@ Vue.use(Toast, options);
 Vue.component('auth-login', require('./components/auth/Login.vue').default);
 
 Vue.component('movie-list', require('./components/misc/MovieList.vue').default);
+Vue.component('watch-list', require('./components/misc/WatchList.vue').default);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 

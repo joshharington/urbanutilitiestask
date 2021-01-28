@@ -18,3 +18,4 @@ Auth::routes();
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/watchlist', 'HomeController@watchlist')->name('watchlist');

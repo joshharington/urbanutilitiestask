@@ -23,6 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['prefix' => '/movies'], function() {
     Route::get('/upcoming', [MovieController::class, 'getUpcoming'])->name('api.movies.upcoming');
     Route::get('/trending', [MovieController::class, 'getTrending'])->name('api.movies.trending');
+    Route::get('/{movieId}', [MovieController::class, 'getMovie'])->name('api.movies.show');
 });
 
 Route::group(['middleware' => ['auth:api'], 'prefix' => '/watchlist'], function() {
